@@ -1,0 +1,58 @@
+<div class="container" ng-controller="XNDHProductCtrl1">
+    <form action="">
+        <!-- Form chi tiết sản phẩm -->
+        <div class="mb-3">
+            <label class="form-label">Tên Sản Phẩm</label>
+            <input class="form-control" type="text" ng-model="sp.ten" disabled>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Giá</label>
+            <input class="form-control" type="text" ng-model="sp.gia" disabled>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Số lượng</label>
+            <input class="form-control" type="number" ng-model="sp.soLuong" ng-change="tinhTongTien()">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Tổng tiền</label>
+            <input class="form-control" type="text" ng-model="sp.tongTien" readonly disabled>
+        </div>
+    </form>
+    
+    <form action="">
+        <hr>
+        <h2>Thông Tin Thanh Toán</h2>
+        <!-- Thông Tin Cá Nhân -->
+        <div class="mb-3">
+            <label class="form-label">Họ và Tên:</label>
+            <input class="form-control" type="text" placeholder="..." ng-model="spp.khachHang">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Số Điện Thoại:</label>
+            <input class="form-control" type="text" placeholder="VD: 0123456789" ng-model="spp.SDT">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email:</label>
+            <input class="form-control" type="text" placeholder="VD: abc@gmail.com" ng-model="spp.Email">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Ghi Chú:</label>
+            <input class="form-control" type="text" placeholder="..." ng-model="spp.ghiChu">
+        </div>
+
+        <div ng-if="formInValid" class="text-danger">
+            {{formInValidMessage}}
+        </div>
+
+        <!-- Nút Thanh Toán -->
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-success" ng-click="onClickCreate()">Xác nhận đơn hàng</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+</head>
+<body>
+    <div>
+       
+        <h1 class="container"> Quản lý Danh sách sản phẩm</h1>
+        <div class="d-flex justify-content-end container"><button type="button" class="btn btn-success btn-lg "> <a href="#!TrangThem-product" class="nav-link">Tạo mới sản phẩm</a></button></div>
+        <p></p>
+        <table class="table table-bordered table-hover container text-center" >
+            <thead class="">
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Ảnh</th>
+                    <th class="fs-4 fw-bold">Tên Sản Phẩm</th>
+                    <th class="fs-4 fw-bold">Giá</th>
+                    <th class="fs-4 fw-bold">Danh mục</th>
+                    <th class="fs-4 fw-bold">Trạng Thái</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="SanPhamProductCtrl" ng-repeat="item in dsSanPham" >
+                <tr>
+                    <td class="fs-5 fw-bold">{{item.id}}</td>     
+                    <td>
+                        <img src="{{item.anh}}" alt="" class="img-fluid rounded-5" style="max-width: 200px; max-height: 1050px;"> 
+                    </td>        
+                    <td class="fs-5 fw-bold">{{item.ten}}</td>  
+                    <td class="fs-5 fw-bold">{{item.gia}}</td>       
+                    <td class="fs-5 fw-bold">{{item.danhMuc}}</td>      
+                    <td><span class="badge bg-success rounded-5"> {{item.trangThai}}</span></td>      
+                    <td> 
+                        <button class="btn btn-warning"> <a href="#!SuaSP-product/{{item.id}}" class="nav-link">Sửa</a></button>
+                        <button class="btn btn-danger" ng-click="onClickDeleteSP(item.id)"> Xóa</button>
+                        <button class="btn btn-success"> <a href="#!sp1-product/{{item.id}}" class="nav-link">Chi Tiết</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover container" >
+            <thead >
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Ảnh</th>
+                    <th class="fs-4 fw-bold">Tên Sản Phẩm</th>
+                    <th class="fs-4 fw-bold">Giá</th>
+                    <th class="fs-4 fw-bold">Danh mục</th>
+                    <th class="fs-4 fw-bold">Trạng Thái</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="SanPhamProductCtrl" ng-repeat="item in dsLapTop">
+                <tr>
+                    <td class="fs-5 fw-bold">{{item.id}}</td>     
+                    <td>
+                        <img src="{{item.anh}}" alt="" class="img-fluid rounded-5" style="max-width: 200px; max-height: 1050px;"> 
+                    </td>        
+                    <td class="fs-5 fw-bold">{{item.ten}}</td>  
+                    <td class="fs-5 fw-bold">{{item.gia}}</td>       
+                    <td class="fs-5 fw-bold">{{item.danhMuc}}</td>      
+                    <td><span class="badge bg-success rounded-5"> {{item.trangThai}}</span></td>      
+                    <td> 
+                        <button class="btn btn-warning"> <a href="#!SuaLT-product/{{item.id}}" class="nav-link">Sửa</a></button>
+                        <button class="btn btn-danger" ng-click="onClickDeleteLT(item.id)"> Xóa</button>
+                        <button class="btn btn-success"> <a href="#!sp2-product/{{item.id}}" class="nav-link">Chi Tiết</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover container" >
+            <thead >
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Ảnh</th>
+                    <th class="fs-4 fw-bold">Tên Sản Phẩm</th>
+                    <th class="fs-4 fw-bold">Giá</th>
+                    <th class="fs-4 fw-bold">Danh mục</th>
+                    <th class="fs-4 fw-bold">Trạng Thái</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="SanPhamProductCtrl" ng-repeat="item in dsSmartwatch">
+                <tr>
+                    <td class="fs-5 fw-bold">{{item.id}}</td>     
+                    <td>
+                        <img src="{{item.anh}}" alt="" class="img-fluid rounded-5" style="max-width: 200px; max-height: 1050px;"> 
+                    </td>        
+                    <td class="fs-5 fw-bold">{{item.ten}}</td>  
+                    <td class="fs-5 fw-bold">{{item.gia}}</td>       
+                    <td class="fs-5 fw-bold">{{item.danhMuc}}</td>      
+                    <td><span class="badge bg-success rounded-5"> {{item.trangThai}}</span></td>      
+                    <td> 
+                        <button class="btn btn-warning"> <a href="#!SuaSW-product/{{item.id}}" class="nav-link">Sửa</a></button>
+                        <button class="btn btn-danger" ng-click="onClickDeleteSW(item.id)"> Xóa</button>
+                        <button class="btn btn-success"><a href="#!sp3-product/{{item.id}}" class="nav-link">Chi Tiết</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover container" >
+            <thead >
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Ảnh</th>
+                    <th class="fs-4 fw-bold">Tên Sản Phẩm</th>
+                    <th class="fs-4 fw-bold">Giá</th>
+                    <th class="fs-4 fw-bold">Danh mục</th>
+                    <th class="fs-4 fw-bold">Trạng Thái</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="SanPhamProductCtrl" ng-repeat="item in dsChuot">
+                <tr>
+                    <td class="fs-5 fw-bold">{{item.id}}</td>     
+                    <td>
+                        <img src="{{item.anh}}" alt="" class="img-fluid rounded-5" style="max-width: 200px; max-height: 1050px;"> 
+                    </td>        
+                    <td class="fs-5 fw-bold">{{item.ten}}</td>  
+                    <td class="fs-5 fw-bold">{{item.gia}}</td>       
+                    <td class="fs-5 fw-bold">{{item.danhMuc}}</td>      
+                    <td><span class="badge bg-success rounded-5"> {{item.trangThai}}</span></td>      
+                    <td> 
+                        <button class="btn btn-warning"> <a href="#!SuaC-product/{{item.id}}" class="nav-link">Sửa</a></button>
+                        <button class="btn btn-danger" ng-click="onClickDeleteC(item.id)"> Xóa</button>
+                        <button class="btn btn-success"> <a href="#!sp4-product/{{item.id}}" class="nav-link">Chi Tiết</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>

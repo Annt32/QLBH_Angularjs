@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+</head>
+<body>
+    
+    <div>
+        <h1 class="container"> Quản lý đơn hàng</h1>
+
+        <p></p>
+        
+        <table class="table table-bordered table-hover container">
+            <thead>
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Tên Sản Phẩm</th>
+                    <th class="fs-4 fw-bold">Giá</th>
+                    <th class="fs-4 fw-bold">Trạng thái</th>
+                    <th class="fs-4 fw-bold">Khách hàng</th>
+                    <th class="fs-4 fw-bold">SDT</th>
+                    <th class="fs-4 fw-bold">Email</th>
+                    <th class="fs-4 fw-bold">Ghi chú</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+                </tr>
+            </thead>
+            <tbody ng-controller="DonHangProductCtrl" ng-repeat="item in dsDonHang">
+                <tr>
+                    <td class="fs-5 fw-bold">{{item.id}}</td>                             
+                    <td class="fs-5 fw-bold">{{item.ten}}</td>  
+                    <td class="fs-5 fw-bold">{{item.gia}}</td>       
+                    <td><span class="badge bg-success rounded-5"> đã thanh toán</span></td>      
+                    <td class="fs-5 fw-bold">{{item.khachHang}}</td>       
+                    <td class="fs-5 fw-bold">{{item.SDT}}</td>       
+                    <td class="fs-5 fw-bold">{{item.Email}}</td>       
+                    <td class="fs-5 fw-bold">{{item.ghiChu}}</td>     
+                    <td>
+                        <button class="btn btn-warning"> Sửa</button>
+                        <button class="btn btn-success"> Chi Tiết</button>
+                    </td>  
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </div>
+
+    
+</body>
+</html>

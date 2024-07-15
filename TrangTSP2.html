@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="Lib/angular.js"></script>
+    <script src="Lib/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="container">
+
+        <div class="container">
+            <H3>Lap Top</H3>
+            <div class="d-flex " ng-controller="kaptopProductCtrl">
+                <div class="row " >
+                    <!-- Box sản phẩm-->
+                    <div class="col-sm-6 col-md-4 col-lg-3 " style="width: 350px; margin-left: 25px;" ng-repeat="item in dsSanPham">
+                        <div class="border rounded overflow-hidden mb-4 shadow" >
+                            <!-- Hiện thị ảnh nâng cao -->
+                            <div class=" ratio" style="--bs-aspect-ratio:75%"> <!-- ration-16x9-->
+                                <div>
+                                    <img src="{{item.anh}}" alt="" class="mw-100 mh-100">
+                                </div>
+                            </div>
+                            <!-- Hiện thị text và button -->
+                            <div class="p-2">
+                                <h5> {{item.ten}}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-bold"> {{item.gia}}</span>
+                                </div>
+                                <button class="btn btn-danger rounded-pill w-100 btn-sm" href="#!xndh1-product/{{item.id}}" > Mua Ngay</button>
+                                <button class="btn btn-success rounded-pill w-100 btn-sm" style="margin-top: 2px;"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button>
+                                <button class="btn btn-warning rounded-pill w-100 btn-sm" style="margin-top: 2px;"> <a class="nav-link" href="#!sp2-product/{{item.id}}">Trang chi tiết</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

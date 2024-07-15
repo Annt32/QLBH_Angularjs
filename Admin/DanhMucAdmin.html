@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+</head>
+
+<body>
+   
+    <div class="container">
+        <h1 class="container"> Quản lý Danh mục sản phẩm</h1>
+        <div class="d-flex justify-content-end container"><button type="button" class="btn btn-success btn-lg "> <a href="#!ThemDM-product" class="nav-link">Tạo mới Danh mục</a></button></div>
+        <table class="table table-striped table-bordered" >
+            <thead>
+                <tr>
+                    <th class="fs-4 fw-bold">ID</th>
+                    <th class="fs-4 fw-bold">Tên Danh mục</th>
+                    <th class="fs-4 fw-bold">Trạng Thái</th>
+                    <th class="fs-4 fw-bold">Tương tác</th>
+
+                </tr>
+            </thead>
+            <tbody ng-controller="DanhmucProductCtrl" ng-repeat="item in dsDanhMuc">
+                <tr>
+                    <th class="fs-4 fw-bold">{{item.id}}</th>
+                    <th class="fs-4 fw-bold">{{item.ten}}</th>
+                    <th class="fs-4 fw-bold">{{item.trangThaiDM}}</th>
+                    <td>
+                        <button class="btn btn-warning"> <a href="#!SuaDM-product/{{item.id}}" class="nav-link">Sửa</a></button>
+                        <button class="btn btn-danger" ng-click="onClickDeleteDM(item.id)"> Xóa</button>
+                    </td>
+                </tr>                            
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

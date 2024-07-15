@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+</head>
+<body>
+
+    <div class="container text-center"> 
+        <h3 style="margin-top: 20px;">Đăng ký</h3>
+    </div>
+    <div class="container" >
+       
+
+        <form action="">
+            <div>
+                <span class="form-label"> Tài khoản</span>
+                <input class="form-control" type="text" placeholder="Nhập tên" ng-model="product.username">
+            </div >
+
+            <div>
+                <span class="form-label"> Mật khẩu</span>
+                <input class="form-control" type="password" placeholder="Nhập Mật khẩu" ng-model="product.password">
+            </div >   
+            <div>
+                <span class="form-label"> Email</span>
+                <input class="form-control" type="text" placeholder="Nhập Email" ng-model="product.email">
+            </div >   
+            <div>
+                <span class="form-label"> SDT</span>
+                <input class="form-control" type="text" placeholder="Nhập SDT" ng-model="product.sdt">
+            </div >                        
+            <div class="mt-3">   
+                <input type="checkbox" class="form-check-input">
+                <span class="form-label"> Bạn đồng ý với <code>Điều khoản, Chính sách quyền riêng tư và Chính sách cookie</code> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào. </span>
+           
+            </div>    
+            <div ng-if="formInValid" class="text-danger">
+                {{formInValidMessage}}
+            </div>
+            <div class="mt-3 d-flex justify-content-end">
+                <button type="button" class="btn btn-success bg-success border-0"  ng-click="onClickCreate()">Đăng ký</button>
+                
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<body ng-app="myApp" ng-controller="detailsProductCtrl4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="{{sp.anh}}" class="d-block w-100" alt="..." style="max-width: 50%;">
+                    </div>
+                  </div>
+            </div>
+        </div>
+   
+        <div class="text-center">
+            <h3>{{sp.ten}}</h3>
+        </div>
+        <div class="d-flex justify-content">
+            <h2> Giá tiền:</h2>
+            <h1 class="fw-bold">{{sp.gia}}</h1>
+        </div>
+        <div class="d-flex justify-content">
+            <h2> Mô Tả: {{sp.mota}} </h2>
+        </div>
+        <button class="btn btn-danger rounded-pill w-100 btn-sm"> Mua Ngay</button>
+        <button class="btn btn-success rounded-pill w-100 btn-sm" style="margin-top: 2px;"> Thêm vào giỏ hàng</button>
+    </div>
+  </body>
+  

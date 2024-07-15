@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="Lib/angular.js"></script>
+    <script src="Lib/angular-route.js"></script>
+
+    <script>     
+        var app = angular.module('myApp', ['ngRoute']);
+        
+        app.config(function ($routeProvider) {
+            $routeProvider
+            .when("/index-product", {
+               templateUrl: "pages/products/index copy.html",
+               controller: "listProductCtrl"
+            })
+            .when("/DangNhap", {
+                templateUrl: "DangNhap.html",
+                controller: "LoginController"
+            })
+            .when("/DangKy", {
+                templateUrl: "DangKy.html",
+                controller: "ThemtaiKhoanProductCtrl"
+            })
+            .when("/CTGioHang", {
+                templateUrl: "GioHang.html",
+                controller: "GioHangController"
+            })
+            .when("/XNDonHang", {
+                templateUrl: "XacNhanDonHang.html",
+                controller: ""
+            })
+        })
+        
+        app.config(function ($routeProvider) {
+      $routeProvider
+      .when("/trangsp1-product", {
+          templateUrl: "TrangTSP1.html",
+          controller: "SanPhamProductCtrl"
+      })
+      .when("/sp1-product/:id", {
+          templateUrl: "pages/products/SP.html",
+          controller: "detailsProductCtrl1"
+      })
+      .when("/trangsp2-product", {
+          templateUrl: "TrangTSP2.html",
+          controller: "kaptopProductCtrl"
+      })
+      .when("/sp2-product/:id", {
+          templateUrl: "pages/products/SP1.html",
+          controller: "detailsProductCtrl2"
+      })
+      .when("/trangsp3-product", {
+          templateUrl: "TrangTSP3.html",
+          controller: "SmartwatchProductCtrl"
+      })
+      .when("/sp3-product/:id", {
+          templateUrl: "pages/products/SP2.html",
+          controller: "detailsProductCtrl3"
+      })
+      .when("/trangsp4-product", {
+          templateUrl: "TrangTSP4.html",
+          controller: "chuotProductCtrl"
+      })
+      .when("/sp4-product/:id", {
+          templateUrl: "pages/products/SP3.html",
+          controller: "detailsProductCtrl4"
+      })
+    })
+      
+        window.onload = function() {
+            if (window.location.hash !== '#!index-product') {
+                window.location.hash = '#!index-product';
+            }
+        };
+        </script>
+
+    <script src="pages/products/index copy.js"></script>
+    <script src="TrangTSP1.js"></script>
+    <script src="TrangTSP2.js"></script>
+    <script src="TrangTSP3.js"></script>
+    <script src="TrangTSP4.js"></script>
+
+    <script src="pages/products/SP.js"></script>
+    <script src="pages/products/SP1.js"></script>
+    <script src="pages/products/SP2.js"></script>
+    <script src="pages/products/SP3.js"></script>
+
+    <script src="DangNhap.js"></script>
+    <script src="DangKy.js"></script>
+    <script src="GioHang.js"></script>
+</head>
+
+
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-light shadow bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="TrangChu.html">
+                <img src="img/Neon_Trance_Ribbon.png" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                
+            </a>
+            <!-- Menu -->
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a href="#!index-product" class="nav-link text-light" async> Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SanPham2.html" class="nav-link"> Sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> Liên Hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> Giới thiệu</a>
+                </li>               
+            </ul> 
+
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Giỏ hàng
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="#!CTGioHang" class="nav-link"> Chi tiết giỏ hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!XNDonHang" class="nav-link"> Xác nhận đơn hàng</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    
+        <ul class="navbar-nav" ng-controller="SomeOtherController">
+            <li class="nav-item">
+                <a href="#!DangNhap" class="nav-link" ng-show="!isLoggedIn()"> Đăng Nhập </a>
+                <a href="#!DangNhap" class="nav-link" ng-show="isLoggedIn()" ng-click="logout()"> Đăng Xuất </a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class=" mt-2">
+        <div ng-view></div>
+      </div>
+   
+    <div class="bg-dark border-top py-3 text-light">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <span> Copyright 2024 by Nguyễn Trương An - AnntPH34131</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

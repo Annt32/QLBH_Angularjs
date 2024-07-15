@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="Lib/angular.js"></script>
+    <script src="Lib/angular-route.js"></script>
+
+    <script>
+        var app = angular.module('myApp', ['ngRoute']);
+        
+        app.config(function ($routeProvider) {
+            $routeProvider
+            .when("/index-product", {
+                templateUrl: "pages/products/index copy.html",
+                controller: "listProductCtrl"
+            })
+            when("/dangnhap-product", {
+                templateUrl: "pages/products/DangNhap.html",
+                controller: "LoginController"
+            })
+        })
+
+        window.onload = function() {
+            // Kiểm tra xem URL có chứa một phần cụ thể không
+            if (window.location.hash !== '#!dangnhap-product') {
+                // Nếu không, chuyển hướng đến phần đó
+                window.location.hash = '#!dangnhap-product';
+            }
+        };
+    </script>
+
+    <script src="DangNhap.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <nav class="navbar navbar-expand-sm bg-light shadow bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/Neon_Trance_Ribbon.png" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+
+            </a>
+            <!-- Menu -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="DanhMucAdmin.html" class="nav-link"> quản lý danh mục sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SanPhamAdmin.html" class="nav-link"> quản lý sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="DonHangAdmin.html" class="nav-link"> quản lý đơn hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#!dangnhap-product" class="nav-link"> Đăng Nhập </a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    <div class=" mt-2">
+        <div ng-view></div>
+      </div>
+    <div style=" width: 250px; height: calc( 100vh - 412px);"></div>
+        <div class="bg-dark border-top py-3 text-light">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <span> Copyright 2024 by Nguyễn Trương An - AnntPH34131</span>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

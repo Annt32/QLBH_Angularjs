@@ -1,0 +1,284 @@
+{
+  "taiKhoan": [
+    {
+      "id": 1,
+      "username": "nguoidung1",
+      "password": "matkhau123",
+      "email": "abc@gmail",
+      "sdt": "0123456789"
+    },
+    {
+      "username": "nguoidung3",
+      "password": "nguoidung3",
+      "email": "nguoidung3@gmail.com",
+      "sdt": "0123456789",
+      "id": 3
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "admin1"
+    }
+  ],
+  "DanhMuc": [
+    {
+      "id": "DM01",
+      "ten": "Điện Thoại",
+      "trangThaiDM": "Mở"
+    },
+    {
+      "id": "DM02",
+      "ten": "LapTop",
+      "trangThaiDM": "Mở"
+    },
+    {
+      "id": "DM03",
+      "ten": "Smartwatch",
+      "trangThaiDM": "Mở"
+    },
+    {
+      "id": "DM04",
+      "ten": "Chuột",
+      "trangThaiDM": "Mở"
+    }
+  ],
+  "SanPham": [
+    {
+      "id": "D001",
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB Test",
+      "anh": "img/Điện thoại iPhone 15 Pro Max 256GB.jpg",
+      "mota": "iPhone 15 Pro Max là một chiếc điện thoại thông minh cao cấp được mong đợi nhất năm 2023. Với nhiều tính năng mới và cải tiến, iPhone 15 Pro Max chắc chắn sẽ là một lựa chọn tuyệt vời cho những người dùng đang tìm kiếm một chiếc điện thoại có hiệu năng mạnh mẽ, camera chất lượng và thiết kế sang trọng.",
+      "gia": "36710000",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Điện thoại"
+    },
+    {
+      "id": "D002",
+      "ten": "Điện thoại Samsung Galaxy A15 5G",
+      "anh": "img/samsung-galaxy-a15-5g-xanh-duong-1.jpg",
+      "mota": "Galaxy A15 5G không ngần ngại đón nhận sự truyền thống với thiết kế vuông vắn, chữ nhật đặc trưng của dòng Galaxy A. Hình dáng này không chỉ thể hiện tính đồng nhất của dòng điện thoại mà còn tôn lên sự sang trọng và mạnh mẽ.",
+      "gia": "6.669.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Điện thoại"
+    },
+    {
+      "id": "D003",
+      "ten": "Điện thoại vivo V29 5G 12GB 6.67 4800 mAh",
+      "anh": "img/vivo-v29e-den-glr-1.jpg",
+      "mota": "vivo V29e 5G là một phiên bản điện thoại di động đáng chú ý trong phân khúc tầm trung, đặc biệt với sự kết hợp tinh tế giữa thiết kế và hiệu suất. Điều làm nổi bật chiếc điện thoại này chính là camera chất lượng, thiết kế sang trọng và viên pin lớn kèm sạc nhanh. ",
+      "gia": "9.690.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Điện thoại"
+    },
+    {
+      "id": "D004",
+      "ten": "Điện thoại xiaomi note 12 5G 128GB",
+      "anh": "img/xiaomi-redmi-note-12-blue-1.jpg",
+      "mota": "Redmi Note 12 8GB/256GB - chiếc điện thoại tầm trung mới của hãng điện thoại thông minh Xiaomi được giới thiệu tại Việt Nam. Với vi xử lý Snapdragon 685 mạnh mẽ và camera 50 MP chất lượng cao, chiếc điện thoại này đã thu hút sự chú ý của người dùng trong phân khúc của mình.",
+      "gia": "5.685.000₫",
+      "trangThai": "Hết hàng",
+      "danhMuc": "Điện thoại"
+    },
+    {
+      "id": "D005",
+      "ten": "dddđ",
+      "mota": "asd",
+      "gia": "5222",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Điện thoại"
+    },
+    {
+      "id": "D006",
+      "ten": "ssssssssssssssssssss dwqeqweqwedas gdfdsfsd",
+      "mota": "ádsadwqe",
+      "gia": "250000",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Điện thoại"
+    }
+  ],
+  "LapTop": [
+    {
+      "id": "L001",
+      "ten": "Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB RTX2050/144Hz/Win11 (HN014W)",
+      "anh": "img/L1.jpg",
+      "mota": "Với bộ vi xử lý Intel Core i5 dòng H mạnh mẽ và card đồ họa rời NVIDIA GeForce RTX 2050 4 GB, laptop Asus TUF Gaming F15 FX506HF là một trong những lựa chọn tuyệt vời cho các game thủ và những người dùng làm việc đa tác vụ hoặc liên quan đến đồ họa, kỹ thuật.",
+      "gia": "16.990.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "LapTop"
+    },
+    {
+      "id": "L002",
+      "ten": "Laptop Acer Aspire 5 Gaming A515 58GM 51LB i5 13420H/16GB/512GB/4GB RTX2050/Win11 (NX.KQ4SV.002)",
+      "anh": "img/L2.jpg",
+      "mota": "Mẫu laptop gaming với mức giá tầm trung đến từ thương hiệu Acer vừa được lên kệ tại Thế Giới Di Động, sở hữu hiệu năng mạnh mẽ với con chip Intel Gen 13 dòng H hiệu năng cao, RAM 16 GB, card rời RTX cùng nhiều tính năng hiện đại. Laptop Acer Aspire 5 Gaming A515 58GM 51LB i5 13420H (NX.KQ4SV.002) chắc chắn sẽ mang đến cho bạn những trải nghiệm sử dụng và chiến game giải trí tuyệt vời.",
+      "gia": "15.990.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "LapTop"
+    },
+    {
+      "id": "L003",
+      "ten": "Laptop Lenovo  Gaming 3 15ACH6 R5 5500H/16GB/512GB/4GB RTX2050/144Hz/Win11 (82K2027PVN)",
+      "anh": "img/L3.jpg",
+      "mota": "Laptop Lenovo Ideapad sở hữu con chip AMD Ryzen 5 5500H tích hợp cùng card rời NVIDIA GeForce RTX 2050 4 GB hỗ trợ mức hiệu suất mạnh mẽ cho phép bạn chiến thoả thích với những tựa game đang hot như: FO4, Call Of Duty, CS:GO,... Ngoài ra, mức cấu hình trên cũng rất hữu ích khi thực hiện chỉnh sửa hình ảnh và edit video cơ bản với Photoshop, AI, CapCut,... và vận hành nhanh chóng các công việc thường ngày.",
+      "gia": "15.490.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "LapTop"
+    },
+    {
+      "id": "L004",
+      "ten": "Laptop MSI Gaming GF63 12UCX i5 12450H/8GB/512GB/4GB RTX2050/144Hz/Win11 (841VN) ",
+      "anh": "img/L4.jpg",
+      "mota": "Bạn có thể chiến dễ dàng các tựa game phổ biến, thực hiện xử lý được các phần mềm chỉnh sửa, thiết kế 2D, 3D cơ bản hay làm việc, giải trí và xem phim mượt mà nhờ hiệu năng mạnh mẽ đến con chip Intel Core i5 12450H cùng card đồ họa NVIDIA GeForce RTX 2050 4 GB.",
+      "gia": "15.990.000₫",
+      "trangThai": "Hết hàng",
+      "danhMuc": "LapTop"
+    }
+  ],
+  "Smartwatch": [
+    {
+      "id": "S001",
+      "ten": "Đồng hồ thông minh BeFit WatchS 45mm dây silicone",
+      "anh": "img/S1.jpg",
+      "mota": "Mang ngôn ngữ thiết kế hiện đại với dáng mặt hình chữ nhật được làm bo cong nhẹ ở các góc, đồng hồ thông minh BeFit với nhiều màu sắc năng động, cá tính, sẽ là món phụ kiện phù hợp cho cả nam và nữ nhờ khả năng đáp ứng tốt nhiều phong cách khác nhau.",
+      "gia": "1.190.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Smartwatch"
+    },
+    {
+      "id": "S002",
+      "ten": "Đồng hồ thông minh Xiaomi Watch 2 Pro 46 mm Đen",
+      "anh": "img/S2.jpg",
+      "mota": "Xiaomi Watch 2 Pro là thế hệ smartwatch thứ 2 sử dụng hệ điều hành Wear OS vừa được Xiaomi trình làng. Với thiết kế sang trọng, hiện đại cùng nhiều tính năng vượt trội, đây hứa hẹn sẽ là người bạn đồng hành lý tưởng cho người dùng trong mọi hoạt động.",
+      "gia": "5.790.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Smartwatch"
+    },
+    {
+      "id": "S003",
+      "ten": "Đồng hồ thông minh Garmin Forerunner 55 42mm",
+      "anh": "img/S3.jpg",
+      "mota": "Đồng hồ thông minh Garmin Forerunner 55 có thiết kế năng động, thể thao dành riêng cho chạy bộ nhưng vẫn không kém phần thời trang, sành điệu với mặt kính tròn và dây đeo silicone mềm mại, êm ái, tạo cảm giác thoải mái khi tập thể thao trong thời gian dài. ",
+      "gia": "5.020.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Smartwatch"
+    },
+    {
+      "id": "S004",
+      "ten": "Đồng hồ thông minh BeFit Watch Ultra 52.6mm",
+      "anh": "img/S4.jpg",
+      "mota": "Đồng hồ thông minh với mặt hình chữ nhật là xu hướng hiện nay, mang đến vẻ ngoài sang trọng, lịch lãm cho người đeo. Kích thước mặt là 52.6mm, theo quan điểm cá nhân của mình thì chiếc đồng hồ này sẽ phù hợp với nam giới hơn. ",
+      "gia": "890.000₫",
+      "trangThai": "Hết hàng",
+      "danhMuc": "Smartwatch"
+    }
+  ],
+  "Chuot": [
+    {
+      "id": "C001",
+      "ten": "Chuột Không Dây Gaming Rapoo VT960 Pro",
+      "anh": "img/C1.jpg",
+      "mota": "Chuột Không Dây Gaming Rapoo VT960 Pro được giới game thủ xem là trợ lý đắc lực cho những trận game, với kiểu dáng hầm hố, gam màu mạnh mẽ, hệ thống đèn LED RGB phong phú, thời lượng pin khủng, độ cảm biến cao, mang đến cho bạn những khoảnh khắc hoàn hảo.",
+      "gia": "1.350.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Chuột"
+    },
+    {
+      "id": "C002",
+      "ten": "Chuột Có dây Gaming Logitech G102 Gen2 Lightsync ",
+      "anh": "img/C2.jpg",
+      "mota": "Mệnh danh là một siêu chuột quốc dân Logitech G102 Gen 2 Lightsync sở hữu hiệu năng cực cao cùng loạt tính năng: dải LED 16.8 triệu màu, nút bấm bền bỉ, chân chuột dày trơn mượt kèm theo một mức giá hầu bao phù hợp với những bạn muốn sự đơn giản nhưng vẫn đi đôi với chất lượng.",
+      "gia": "399.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Chuột"
+    },
+    {
+      "id": "C003",
+      "ten": "Chuột Có dây Gaming Corsair M55 RGB Pro",
+      "anh": "img/C3.jpg",
+      "mota": "Chuột máy tính mang đến sự thoải mái tốt nhất trên tay cầm, vừa vặn, chắc chắn, người dùng kiểm soát tốt mọi thao tác trên chuột, vỏ chuột làm từ nhựa nhám chống trơn trượt. Đây là sản phẩm chuột hợp với người thuận cả hai tay.",
+      "gia": "575.000₫",
+      "trangThai": "Còn hàng",
+      "danhMuc": "Chuột"
+    },
+    {
+      "id": "C004",
+      "ten": "Chuột Không dây Rapoo B2",
+      "anh": "img/C4.jpg",
+      "mota": "Chuột không dây Rapoo B2 sở hữu kiểu dáng tối giản, thiết kế gọn chắc, màu sắc thời thượng, độ nhạy cao, mang đến cho người dùng những trải nghiệm tuyệt vời nhất.",
+      "gia": "150.000₫",
+      "trangThai": "Hết hàng",
+      "danhMuc": "Chuột"
+    }
+  ],
+  "DonHang": [
+    {
+      "id": 1,
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB",
+      "gia": "36.710.000₫",
+      "trangThai": "Đã thanh toán",
+      "khachHang": "Nguyễn Văn A",
+      "SDT": "0123456789",
+      "Email": "abc@gmail.com",
+      "ghiChu": "Không có"
+    },
+    {
+      "id": 2,
+      "ten": "",
+      "gia": 0,
+      "khachHang": "Văn A",
+      "SDT": "987654321",
+      "Email": "bg@gmail.com",
+      "ghiChu": "ko có"
+    },
+    {
+      "khachHang": "dsadsa",
+      "SDT": "2131",
+      "Email": "ádas",
+      "ghiChu": "dấd",
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB Test",
+      "gia": "36710000",
+      "soLuong": 2,
+      "id": 3
+    },
+    {
+      "khachHang": "Văn A",
+      "SDT": "21321421421",
+      "Email": "fd@gmail.com",
+      "ghiChu": "chịu",
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB Test",
+      "gia": "36710000",
+      "soLuong": 3,
+      "tongTien": 110130000,
+      "id": 4
+    },
+    {
+      "khachHang": "an",
+      "ghiChu": "dd",
+      "ten": "Điện thoại vivo V29 5G 12GB 6.67 4800 mAh",
+      "gia": "9.690.000₫",
+      "soLuong": 10,
+      "tongTien": 96900000,
+      "id": 5
+    },
+    {
+      "khachHang": "an",
+      "ghiChu": "ss",
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB Test",
+      "gia": "36710000",
+      "soLuong": 10,
+      "tongTien": 367100000,
+      "id": 6
+    }
+  ],
+  "GioHang": [
+    {
+      "id": 1,
+      "anh": "img/Điện thoại iPhone 15 Pro Max 256GB.jpg",
+      "ten": "Điện thoại iPhone 15 Pro Max 256GB",
+      "gia": "36.710.000₫",
+      "soLuong": "1"
+    }
+  ]
+}

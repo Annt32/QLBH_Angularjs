@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link rel="stylesheet" href="Lib/bootstrap.css">
+    <script src="Lib/bootstrap.js"></script>
+    <script src="Lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="Lib/angular.js"></script>
+    <script src="Lib/angular-route.js"></script>
+
+    <script>
+         var app = angular.module('myApp', ['ngRoute']);
+        
+        app.config(function ($routeProvider) {
+            $routeProvider
+            .when("/DanhMucAdmin-product", {
+                templateUrl: "Admin/DanhMucAdmin.html",
+                controller: "DanhmucProductCtrl"
+            })
+            .when("/SanPhamAdmin-product", {
+                templateUrl: "Admin/SanPhamAdmin.html",
+                controller: "SanPhamProductCtrl"
+            })
+            .when("/DonHangAdmin-product", {
+                templateUrl: "Admin/DonHangAdmin.html",
+                controller: "DonHangProductCtrl"
+            })
+
+            //Thêm Bên QL sản phẩm
+            .when("/TrangThem-product", {
+                templateUrl: "Admin/TrangThem.html",
+                controller: ""
+            })
+            .when("/ThemSP-product", {
+                templateUrl: "Admin/ThemSP.html",
+                controller: "ThemSanPhamProductCtrl"
+            })
+            .when("/SuaSP-product/:id", {
+                templateUrl: "Admin/SuaSP.html",
+                controller: "SuaSanPhamProductCtrl"
+            })
+            .when("/ThemLT-product", {
+                templateUrl: "Admin/ThemLT.html",
+                controller: "ThemLapTopProductCtrl"
+            })
+            .when("/SuaLT-product/:id", {
+                templateUrl: "Admin/SuaLT.html",
+                controller: "SuaLapTopProductCtrl"
+            })
+            .when("/ThemSW-product", {
+                templateUrl: "Admin/ThemSW.html",
+                controller: "ThemSWProductCtrl"
+            })
+            .when("/SuaSW-product/:id", {
+                templateUrl: "Admin/SuaSW.html",
+                controller: "SuaSWProductCtrl"
+            })
+            .when("/ThemC-product", {
+                templateUrl: "Admin/ThemC.html",
+                controller: "ThemCProductCtrl"
+            })
+            .when("/SuaC-product/:id", {
+                templateUrl: "Admin/SuaC.html",
+                controller: "SuaChuotProductCtrl"
+            })
+
+            // Thêm danh mục
+            .when("/ThemDM-product", {
+                templateUrl: "Admin/ThemDM.html",
+                controller: "ThemDMProductCtrl"
+            })
+            .when("/SuaDM-product/:id", {
+                templateUrl: "Admin/SuaDM.html",
+                controller: "SuaDMProductCtrl"
+            })
+
+            // Chi tiết SP bên admin
+            .when("/sp1-product/:id", {
+                templateUrl: "pages/products/SP.html",
+                controller: "detailsProductCtrl1"
+            })
+           
+            .when("/sp2-product/:id", {
+                templateUrl: "pages/products/SP1.html",
+                controller: "detailsProductCtrl2"
+            })
+            
+            .when("/sp3-product/:id", {
+                templateUrl: "pages/products/SP2.html",
+                controller: "detailsProductCtrl3"
+            })
+            
+            .when("/sp4-product/:id", {
+                templateUrl: "pages/products/SP3.html",
+                controller: "detailsProductCtrl4"
+            })
+            
+        })
+
+
+    </script>
+
+    <script src="Admin/SanPhamAdmin.js"></script>
+    <script src="Admin/DanhMucAdmin.js"></script>
+    <script src="Admin/DonHangAdmin.js"></script>
+    <script src="Admin/ThemSP.js"></script>
+    <script src="Admin/SuaSP.js"></script>
+    <script src="pages/products/SP.js"></script>
+    <script src="pages/products/SP1.js"></script>
+    <script src="pages/products/SP2.js"></script>
+    <script src="pages/products/SP3.js"></script>
+</head>
+<body ng-app="myApp">
+    <div>
+        <nav class="navbar navbar-expand-sm bg-light shadow bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Neon_Trance_Ribbon.png" alt="Logo" width="50" height="50"
+                        class="d-inline-block align-text-top">
+    
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link"> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SanPham2.html" class="nav-link"> Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-light" > Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!DanhMucAdmin-product" class="nav-link " > Quản lý danh mục</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!SanPhamAdmin-product" class="nav-link "> Quản lý sản phẩm</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#!DonHangAdmin-product" class="nav-link "> Quản lý đơn hàng</a>
+                    </li>
+                </ul> 
+                <!-- Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Admin
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a href="DanhMucAdmin.html" class="nav-link"> quản lý danh mục sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="SanPhamAdmin.html" class="nav-link"> quản lý sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="DonHangAdmin.html" class="nav-link"> quản lý đơn hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"> Đăng xuất</a>
+                </li>
+    
+            </ul> 
+        </nav>
+        
+
+          <div class="d-flex ">
+            <!-- Khu vực menu trái-->
+            <div style="width: 250px; height: calc( 100vh - 80px);" class="bg-light border-end pt-4 px-2">
+                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#!TrangThem-product" class="nav-link"> Thêm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Sửa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Xóa</a>
+                    </li>
+                </ul> 
+            </div>
+            <!-- Khu vực nội dung chính-->
+            <div class="pt-4" style="width: calc(100% - 250px);"> 
+                <div class=" mt-2">
+                    <div ng-view></div>
+                  </div>
+            </div>
+        </div>
+    <div style=" width: 250px; height: calc( 100vh - 889px);"></div>
+    <div class="bg-dark border-top py-3 text-light">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <span> Copyright 2024 by Nguyễn Trương An - AnntPH34131</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
